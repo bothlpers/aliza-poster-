@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Trading Community</title>
+    
+    <!-- Premium Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4488921341383779');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4488921341383779&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        /* === BASE STYLES & FAST RENDERING === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        body {
+            background: linear-gradient(135deg, #060913 0%, #111524 100%); 
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* === CRAZY ANIMATED BACKGROUND (GPU ACCELERATED) === */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.04) 0%, transparent 60%);
+            animation: slowRotate 25s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* === CONTAINER === */
+        .container {
+            max-width: 480px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* === PROFILE IMAGE (3D FLOAT & NEON GLOW) === */
+        .profile-img-container {
+            margin-bottom: 25px;
+            animation: fadeInDown 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) both, floatUpDown 4s ease-in-out infinite;
+            position: relative;
+        }
+        .profile-img-container::after {
+            content: '';
+            position: absolute;
+            top: -3px; left: -3px; right: -3px; bottom: -3px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #FFD700, #ff5e00, #FFD700);
+            background-size: 200% 200%;
+            z-index: -1;
+            filter: blur(12px);
+            opacity: 0.7;
+            animation: shimmerGradient 3s ease infinite;
+        }
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #FFD700;
+            background-color: #000;
+        }
+
+        /* === PREMIUM CTA BUTTON === */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #FFD700, #ff8c00, #FFD700);
+            background-size: 200% auto;
+            color: #0a0f1a;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 18px 30px;
+            border-radius: 50px;
+            border: none;
+            width: 100%;
+            max-width: 350px;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out 0.3s both, shimmerGradient 3s linear infinite;
+            margin-bottom: 35px;
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+        .cta-button:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.6);
+        }
+
+        /* === GLASSMORPHISM KEY POINTS SECTION === */
+        .features-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 25px 20px;
+            width: 100%;
+            text-align: left;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.05), 0 15px 35px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+            margin-bottom: 30px;
+        }
+        .features-title {
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            color: #e2e8f0;
+        }
+        .feature-list li:last-child {
+            margin-bottom: 0;
+        }
+        .feature-list li span {
+            font-size: 18px;
+            margin-right: 12px;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 5px;
+            border-radius: 50%;
+            display: flex;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+        }
+
+        /* === DISCLAIMER === */
+        .disclaimer {
+            font-size: 10px;
+            color: #64748b;
+            line-height: 1.6;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 20px;
+            animation: fadeIn 1s ease-out 0.8s both;
+            max-width: 90%;
+        }
+
+        /* === HIGH-PERFORMANCE ANIMATIONS === */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slowRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes shimmerGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- TOP PROFILE IMAGE -->
+        <div class="profile-img-container">
+            <img src="https://www.image2url.com/r2/default/images/1785727832776-0d17e62b-4f27-4046-89de-299e185891df.jpg" alt="Profile Image" class="profile-img">
+        </div>
+
+        <!-- MAIN ACTION BUTTON -->
+        <a id="join-telegram-btn" href="https://t.me/+dkqJKkX2W-wwYWE1" class="cta-button">
+            🚀 Join Telegram Now
+        </a>
+
+        <!-- PUNCHY & SHORT KEY POINTS -->
+        <div class="features-box">
+            <h2 class="features-title">What's Inside? 👇</h2>
+            <ul class="feature-list">
+                <li><span>🎯</span> 95%+ Accuracy Daily Signals</li>
+                <li><span>🔄</span> Live Loss Recovery Sessions</li>
+                <li><span>🤖</span> Exclusive Premium AI Bot Access</li>
+                <li><span>💎</span> Lifetime VIP Community Access</li>
+            </ul>
+        </div>
+
+        <!-- STRICT DISCLAIMER -->
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+            <p style="margin-top: 8px;">Trading involves high risk and may not be suitable for all investors. Past performance is not indicative of future results.</p>
+        </div>
+
+    </div>
+
+    <!-- TRACKING SCRIPT (SUBSCRIBE EVENT ONLY ON BUTTON CLICK) -->
+    <script>
+        document.getElementById('join-telegram-btn').addEventListener('click', function() {
+            // Fires Subscribe event immediately on tap without blocking native OS redirect
+            if (typeof fbq === 'function') {
+                fbq('track', 'Subscribe');
+            }
+        });
+    </script>
+
+</body>
+</html>
